@@ -2,7 +2,7 @@
 	{
 		"title": "jlee0425.github.io",
 		"thumbnail": "portfolio.png",
-		"tags": ["React", "Gatsby.js", "Prismic"],
+		"tags": ["React", "Gatsby.js", "Prismic", "GraphQL"],
 		"to": "/portfolio/portfolio",
 		"url": "https://jlee0425.github.io",
 		"git": "https://github.com/jlee0425/jlee0425.github.io/tree/source"
