@@ -1,3 +1,4 @@
+import Button from '@styles/Button';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -39,7 +40,8 @@ const Container = styled.div`
 	text-align: center;
 	width: 400px;
 	height: 600px;
-
+	margin-bottom: 2rem;
+	z-index: 1;
 	@media ${({ theme }) => theme.breakpoints.sm} {
 		width: 100%;
 	}
@@ -47,6 +49,7 @@ const Container = styled.div`
 const Img = styled.img`
 	width: 100%;
 	height: 60%;
+	border-radius: 10px 10px 0 0;
 	object-fit: cover;
 	overflow: hidden;
 `;
