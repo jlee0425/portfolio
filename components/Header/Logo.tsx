@@ -6,9 +6,9 @@ export const Logo = () => {
 	return (
 		<Container>
 			<Link href='/'>
-				<LogoImg>
-					<img src='./icon.png' width='50px' />
-				</LogoImg>
+				<LogoContainer>
+					<LogoImg src='./logo_white.png' />
+				</LogoContainer>
 			</Link>
 		</Container>
 	);
@@ -26,8 +26,16 @@ const Container = styled.div`
 	}
 `;
 
-const LogoImg = styled.a`
+const LogoContainer = styled.a`
 	display: flex;
 	align-items: center;
 	color: white;
+`;
+
+const LogoImg = styled.img`
+	width: 150px;
+
+	@media ${({ theme }) => theme.breakpoints.sm} {
+		width: 100px;
+	}
 `;
