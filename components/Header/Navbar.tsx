@@ -24,6 +24,10 @@ const Container = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+
+	@media ${(props) => props.theme.breakpoints.sm} {
+		grid-area: 2 / 2 / 3 / 5;
+	}
 `;
 
 const NavLink = styled.a`
@@ -35,5 +39,9 @@ const NavLink = styled.a`
 		color: #fff;
 		opacity: 1;
 		cursor: pointer;
+	}
+
+	@media ${(props) => props.theme.breakpoints.sm} {
+		padding: 0.5rem;
 	}
 `;

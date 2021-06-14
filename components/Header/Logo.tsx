@@ -20,6 +20,10 @@ const Container = styled.div`
 	flex-direction: row;
 	align-content: center;
 	cursor: pointer;
+
+	@media ${(props) => props.theme.breakpoints.sm} {
+		grid-area: 1 / 1 / 2 / 3;
+	}
 `;
 
 const LogoImg = styled.a`
