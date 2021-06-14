@@ -2,6 +2,7 @@ import React from 'react';
 import {
 	Section,
 	SectionDivider,
+	SectionText,
 	SectionTitle,
 } from '@styles/styledComponents';
 import styled from 'styled-components';
@@ -10,12 +11,18 @@ import projects from '@lib/projects.json';
 
 const index = () => {
 	return (
-		<Section nopadding id='projects'>
-			<SectionDivider />
-			<SectionTitle main>Projects</SectionTitle>
+		<Section id='projects'>
+			<SectionDivider divider />
+			<SectionTitle>Projects</SectionTitle>
+			<SectionText>
+				I am a firm believer that you learn the most by doing something
+				yourself. Below are the lists of personal projects I have done while
+				studying web technologies.
+			</SectionText>
 			<GridContainer>
 				{projects.map(({ title, thumbnail, to, tags, git, url }) => (
 					<ProjectCard
+						key={title}
 						title={title}
 						image={thumbnail}
 						to={to}
