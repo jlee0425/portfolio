@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
+import Footer from '@components/Footer';
+import Header from '@components/Header';
 
 interface Props {
-	children: React.ReactNode;
+	children: ReactNode;
 }
 
-export const Layout = ({ children }: Props) => {
+const index = ({ children }: Props) => {
 	return (
 		<Container>
 			<Header />
@@ -16,6 +16,8 @@ export const Layout = ({ children }: Props) => {
 		</Container>
 	);
 };
+
+export default index;
 
 const Container = styled.div`
 	max-width: 1280px;
