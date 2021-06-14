@@ -122,6 +122,7 @@ export const SectionDivider = styled.div<DividerProps>`
 		height: 2px;
 	}
 `;
+
 export const SectionSubText = styled.p`
 	max-width: 800px;
 	font-weight: 300;
@@ -140,6 +141,7 @@ export const SectionSubText = styled.p`
 		line-height: 22px;
 	}
 `;
+
 export const SecondaryBtn = styled.button`
 	color: #fff;
 	background: none;
