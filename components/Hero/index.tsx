@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from '@styles/Button';
 import { Section, SectionText, SectionTitle } from '@styles/styledComponents';
 
 const index = () => {
@@ -9,16 +8,9 @@ const index = () => {
 			<Desc>
 				<SectionTitle main>
 					반갑습니다. <br />
-					Hello.
+					Greetings. <br />
 				</SectionTitle>
 				<SectionText>More texts.</SectionText>
-				<Button
-					onClick={() => {
-						alert('Learn more');
-					}}
-				>
-					Learn More.
-				</Button>
 			</Desc>
 		</Section>
 	);
