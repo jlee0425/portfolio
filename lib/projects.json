@@ -1,0 +1,34 @@
+[
+	{
+		"title": "jlee0425.github.io",
+		"thumbnail": "portfolio.png",
+		"tags": ["React", "Gatsby.js", "Prismic"],
+		"to": "/portfolio/portfolio",
+		"url": "https://jlee0425.github.io",
+		"git": "https://github.com/jlee0425/jlee0425.github.io/tree/source"
+	},
+	{
+		"title": "Sorting Visualizer",
+		"thumbnail": "sorting-visualizer.png",
+		"tags": ["React", "React-spring", "Semantic-ui"],
+		"to": "/portfolio/sorting-visualizer",
+		"url": "https://quirky-swirles-9080c2.netlify.app",
+		"git": "https://github.com/jlee0425/Sorting-Visualizer"
+	},
+	{
+		"title": "COVID-19 Tracker",
+		"thumbnail": "covid19-tracker.png",
+		"tags": ["React", "recharts.js", "Axios", "Material-ui"],
+		"to": "/portfolio/covid19-tracker",
+		"url": "https://blissful-saha-fa57eb.netlify.app",
+		"git": "https://github.com/jlee0425/covid-19-tracker"
+	},
+	{
+		"title": "Movie Browser",
+		"thumbnail": "movie-browser.png",
+		"tags": ["React Native", "Expo", "Redux"],
+		"to": "/portfolio/movie-browser",
+		"url": "https://youtu.be/wGMgR8q_aRs",
+		"git": "https://github.com/jlee0425/Movie_Browser"
+	}
+]
