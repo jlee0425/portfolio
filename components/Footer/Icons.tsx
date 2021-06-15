@@ -23,7 +23,6 @@ export const Icons = () => {
 };
 
 const Container = styled.div`
-	grid-area: 1/5/2/6;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
