@@ -7,6 +7,7 @@ import {
 import React from 'react';
 import { TechList } from './TechList';
 
+// TODO media small
 const index = () => {
 	return (
 		<Section id='tech'>
