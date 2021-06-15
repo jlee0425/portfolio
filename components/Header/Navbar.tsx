@@ -2,12 +2,22 @@ import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 
-export const Navbar = () => {
+interface NavProps {
+	isBurger: boolean;
+	hidden: boolean;
+}
+
+export const Navbar = ({ hidden, isBurger }: NavProps) => {
 	return (
-		<Container>
+		<Container hidden={hidden} isBurger={isBurger}>
 			<li>
 				<Link href='#projects'>
 					<NavLink>Projects</NavLink>
+				</Link>
+			</li>
+			<li>
+				<Link href='#tech'>
+					<NavLink>Tech</NavLink>
 				</Link>
 			</li>
 			<li>
@@ -19,17 +29,20 @@ export const Navbar = () => {
 	);
 };
 
-const Container = styled.div`
-	grid-area: 1/2/2/4;
+const Container = styled.div<NavProps>`
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	height: 100%;
 
-	@media ${(props) => props.theme.breakpoints.sm} {
-		grid-area: 2 / 2 / 3 / 5;
-	}
+	transform: ${({ hidden, isBurger }) =>
+		!isBurger
+			? `translateX(0)`
+			: hidden
+			? `translateX(120%)`
+			: `translateX(-50%)`};
+	transition: transform 0.5s ease-in-out;
 `;
-
 const NavLink = styled.a`
 	font-size: 2rem;
 	line-height: 32px;
