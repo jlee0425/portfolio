@@ -16,7 +16,7 @@ const index = () => {
 			<SectionTitle>Projects</SectionTitle>
 			<SectionText>
 				I am a firm believer that you can learn the most from experiencing
-				yourself. Below are the lists of personal projects I have done while
+				yourself. Below is the list of personal projects I have worked on while
 				studying web technologies.
 			</SectionText>
 			<GridContainer>
