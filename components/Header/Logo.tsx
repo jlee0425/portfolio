@@ -2,9 +2,13 @@ import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 
-export const Logo = () => {
+interface LogoProps {
+	hidden?: boolean;
+}
+
+export const Logo = ({ hidden }: LogoProps) => {
 	return (
-		<Container>
+		<Container hidden={hidden}>
 			<Link href='/'>
 				<LogoContainer>
 					<LogoImg src='./logo_white.png' />
@@ -15,15 +19,14 @@ export const Logo = () => {
 };
 
 const Container = styled.div`
-	grid-area: 1/1/2/2;
 	display: flex;
 	flex-direction: row;
 	align-content: center;
 	cursor: pointer;
+	height: 100%;
 
-	@media ${(props) => props.theme.breakpoints.sm} {
-		grid-area: 1 / 1 / 2 / 3;
-	}
+	transform: ${({ hidden }) => (hidden ? 'translate(-200%)' : 'translate(0)')};
+	transition: transform 0.5s ease-in-out;
 `;
 
 const LogoContainer = styled.a`
