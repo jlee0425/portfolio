@@ -4,14 +4,15 @@ import styled from 'styled-components';
 
 interface LogoProps {
 	hidden?: boolean;
+	lg?: boolean;
 }
 
-export const Logo = ({ hidden }: LogoProps) => {
+export const Logo = ({ hidden, lg }: LogoProps) => {
 	return (
 		<Container hidden={hidden}>
 			<Link href='/'>
 				<LogoContainer>
-					<LogoImg src='./logo_white.png' />
+					<LogoImg src='./logo_white.png' lg={lg} />
 				</LogoContainer>
 			</Link>
 		</Container>
@@ -35,8 +36,8 @@ const LogoContainer = styled.a`
 	color: white;
 `;
 
-const LogoImg = styled.img`
-	width: 150px;
+const LogoImg = styled.img<LogoProps>`
+	${({ lg }) => (lg ? `width: 250px;` : `width: 150px;`)};
 
 	@media ${({ theme }) => theme.breakpoints.sm} {
 		width: 100px;
