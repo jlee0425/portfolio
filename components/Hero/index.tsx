@@ -10,7 +10,11 @@ const index = () => {
 					반갑습니다. <br />
 					Greetings. <br />
 				</SectionTitle>
-				<SectionText>More texts.</SectionText>
+				<SectionText>Front-end Developer. React Enthusiast.</SectionText>
+				<SectionText>
+					I find the most joy in working as a team and giving each other
+					motivation to further improve.
+				</SectionText>
 			</Desc>
 		</Section>
 	);
