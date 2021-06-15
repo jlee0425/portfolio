@@ -15,7 +15,7 @@ const index = () => {
 			<SectionDivider divider />
 			<SectionTitle>Projects</SectionTitle>
 			<SectionText>
-				I am a firm believer that you learn the most by doing something
+				I am a firm believer that you can learn the most from experiencing
 				yourself. Below are the lists of personal projects I have done while
 				studying web technologies.
 			</SectionText>
