@@ -39,7 +39,7 @@ const Icon = styled.a`
 	border-radius: 50px;
 	padding-right: 1rem;
 	font-size: 2.5rem;
-
+	margin-bottom: 5rem;
 	&:hover {
 		background-color: #212d45;
 		transform: scale(1.2);
