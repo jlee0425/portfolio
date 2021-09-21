@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Sling as Hamburger } from 'hamburger-react';
 import { Logo } from './Logo';
 import { Navbar } from './Navbar';
+import { useViewWidth } from 'hooks/useViewWidth';
 
 const Header = () => {
 	const vw = useViewWidth();
@@ -39,20 +40,6 @@ const Header = () => {
 };
 
 export default Header;
-
-const useViewWidth = () => {
-	const getViewportWidth = () =>
-		Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-	const [vw, setVW] = useState(0);
-	useEffect(() => {
-		const handleResize = () => setVW(getViewportWidth());
-		window.addEventListener('resize', handleResize);
-		handleResize();
-		return () => window.removeEventListener('resize', handleResize);
-	}, []);
-
-	return vw;
-};
 
 const Container = styled.div`
 	top: 0;
