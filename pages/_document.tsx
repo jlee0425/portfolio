@@ -1,3 +1,4 @@
+import { ServerStyleSheet } from 'styled-components';
 import Document, {
 	Html,
 	Head,
@@ -5,9 +6,9 @@ import Document, {
 	NextScript,
 	DocumentContext,
 } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
-
-export default class MyDocument extends Document {
+import { NextComponentType } from 'next';
+import { AppInitialProps } from 'next/app';
+class MyDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
 		const sheet = new ServerStyleSheet();
 		const originalRenderPage = ctx.renderPage;
@@ -15,7 +16,7 @@ export default class MyDocument extends Document {
 		try {
 			ctx.renderPage = () =>
 				originalRenderPage({
-					enhanceApp: (App) => (props) =>
+					enhanceApp: (App: NextComponentType) => (props: AppInitialProps) =>
 						sheet.collectStyles(<App {...props} />),
 				});
 
@@ -51,3 +52,5 @@ export default class MyDocument extends Document {
 		);
 	}
 }
+
+export default MyDocument;

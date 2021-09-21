@@ -10,7 +10,7 @@ interface LogoProps {
 export const Logo = ({ hidden, lg }: LogoProps) => {
 	return (
 		<Container hidden={hidden}>
-			<Link href='/'>
+			<Link href='/' passHref>
 				<LogoContainer>
 					<LogoImg src='./logo_white.png' lg={lg} />
 				</LogoContainer>

@@ -11,17 +11,17 @@ export const Navbar = ({ hidden, isBurger }: NavProps) => {
 	return (
 		<Container hidden={hidden} isBurger={isBurger}>
 			<li>
-				<Link href='#projects'>
+				<Link href='#projects' passHref>
 					<NavLink>Projects</NavLink>
 				</Link>
 			</li>
 			<li>
-				<Link href='#tech'>
+				<Link href='#tech' passHref>
 					<NavLink>Tech</NavLink>
 				</Link>
 			</li>
 			<li>
-				<Link href='#contact'>
+				<Link href='#contact' passHref>
 					<NavLink>Contact</NavLink>
 				</Link>
 			</li>
