@@ -1,14 +1,12 @@
-import { ServerStyleSheet } from 'styled-components';
 import Document, {
-	Html,
+	DocumentContext,
 	Head,
+	Html,
 	Main,
 	NextScript,
-	DocumentContext,
 } from 'next/document';
-import { NextComponentType } from 'next';
-import { AppInitialProps } from 'next/app';
-class MyDocument extends Document {
+import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
+export default class MyDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
 		const sheet = new ServerStyleSheet();
 		const originalRenderPage = ctx.renderPage;
@@ -16,8 +14,12 @@ class MyDocument extends Document {
 		try {
 			ctx.renderPage = () =>
 				originalRenderPage({
-					enhanceApp: (App: NextComponentType) => (props: AppInitialProps) =>
-						sheet.collectStyles(<App {...props} />),
+					enhanceApp: (App) => (props) =>
+						sheet.collectStyles(
+							<StyleSheetManager sheet={sheet.instance}>
+								<App {...props} />
+							</StyleSheetManager>
+						),
 				});
 
 			const initialProps = await Document.getInitialProps(ctx);
@@ -40,8 +42,8 @@ class MyDocument extends Document {
 			<Html>
 				<Head>
 					<link
-						rel='stylesheet'
-						href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap'
+						rel="stylesheet"
+						href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
 					/>
 				</Head>
 				<body>
@@ -52,5 +54,3 @@ class MyDocument extends Document {
 		);
 	}
 }
-
-export default MyDocument;
