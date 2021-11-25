@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface NavProps {
 	isBurger: boolean;
@@ -39,9 +39,18 @@ const Container = styled.div<NavProps>`
 		!isBurger
 			? `translateX(0)`
 			: hidden
-			? `translateX(120%)`
-			: `translateX(-30%)`};
-	transition: transform 0.5s ease-in-out;
+			? css`
+				translateX(120%);
+				opacity: 0;
+			`
+			: css`
+				translateX(-30%); 
+				opacity: 1;
+			`};
+	-webkit-transition: transform 0.3s ease-in-out, opacity 0.3s linear;
+	-moz-transition: transform 0.3s ease-in-out, opacity 0.3s linear;
+	-o-transition: transform 0.3s ease-in-out, opacity 0.3s linear;
+	transition: transform 0.3s ease-in-out, opacity 0.3s linear;
 
 	> li {
 		margin-right: 2rem;

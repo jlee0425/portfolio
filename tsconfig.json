@@ -14,6 +14,8 @@
 		"isolatedModules": true,
 		"jsx": "preserve",
 		"baseUrl": "./",
+		"experimentalDecorators": true,
+		"jsxImportSource": "react",
 		"paths": {
 			"@components/*": ["components/*"],
 			"@styles/*": ["styles/*"],
