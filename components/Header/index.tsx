@@ -29,7 +29,7 @@ const Header = () => {
 						hideOutline
 						duration={0.5}
 						size={28}
-						color='rgba(255, 255, 255, 0.5)'
+						color="rgba(255, 255, 255, 0.5)"
 						onToggle={toggle}
 					/>
 				</BurgerContainer>
@@ -44,22 +44,28 @@ export default Header;
 const Container = styled.div`
 	top: 0;
 	position: sticky;
-	display: grid;
-	grid-template-columns: 1fr 1.5fr;
-	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 7rem;
+	padding: 1rem 1.5rem;
 	overflow: hidden;
 	background: ${({ theme }) => theme.colors.background1};
-	z-index: 100;
+	border-bottom: 1px solid ${({ theme }) => theme.colors.background2};
+	z-index: 3;
 
 	@media ${({ theme }) => theme.breakpoints.sm} {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 1rem 3rem;
+		padding: 1rem;
 	}
 `;
 
 const BurgerContainer = styled.div`
 	position: absolute;
 	right: 3rem;
+	@media ${({ theme }) => theme.breakpoints.sm} {
+		right: 1rem;
+	}
 `;

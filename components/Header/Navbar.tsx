@@ -11,17 +11,17 @@ export const Navbar = ({ hidden, isBurger }: NavProps) => {
 	return (
 		<Container hidden={hidden} isBurger={isBurger}>
 			<li>
-				<Link href='#projects' passHref>
+				<Link href="#projects" passHref>
 					<NavLink>Projects</NavLink>
 				</Link>
 			</li>
 			<li>
-				<Link href='#tech' passHref>
+				<Link href="#tech" passHref>
 					<NavLink>Tech</NavLink>
 				</Link>
 			</li>
 			<li>
-				<Link href='#contact' passHref>
+				<Link href="#contact" passHref>
 					<NavLink>Contact</NavLink>
 				</Link>
 			</li>
@@ -40,12 +40,15 @@ const Container = styled.div<NavProps>`
 			? `translateX(0)`
 			: hidden
 			? `translateX(120%)`
-			: `translateX(-50%)`};
+			: `translateX(-30%)`};
 	transition: transform 0.5s ease-in-out;
+
+	> li {
+		margin-right: 2rem;
+	}
 `;
 const NavLink = styled.a`
 	font-size: 2rem;
-	line-height: 32px;
 	color: rgba(255, 255, 255, 0.75);
 	transition: 0.4s ease;
 	&:hover {
