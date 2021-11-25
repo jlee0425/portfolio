@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import Footer from '@components/Footer';
 import Header from '@components/Header';
+import Head from 'next/head';
 
 interface Props {
 	children: ReactNode;
@@ -9,11 +10,17 @@ interface Props {
 
 const index = ({ children }: Props) => {
 	return (
-		<Container>
-			<Header />
-			<main>{children}</main>
-			<Footer />
-		</Container>
+		<>
+			<Head>
+				{/* <link rel="icon" href="./logo.png" /> */}
+				<title>JLEE</title>
+			</Head>
+			<Container>
+				<Header />
+				<main>{children}</main>
+				<Footer />
+			</Container>
+		</>
 	);
 };
 
