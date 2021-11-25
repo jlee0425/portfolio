@@ -3,13 +3,15 @@ import styled from 'styled-components';
 import {
 	SiTypescript,
 	SiReact,
-	SiNextDotJs,
 	SiGatsby,
-	SiNodeDotJs,
 	SiFirebase,
 	SiPrismic,
+	SiNextdotjs,
+	SiNodedotjs,
 	SiGraphql,
+	SiNestjs,
 } from 'react-icons/si';
+import { BsBraces } from 'react-icons/bs';
 
 import { TechSubList } from './TechSubList';
 
@@ -49,53 +51,64 @@ const Title = styled.h1`
 		margin-bottom: 4px;
 	}
 `;
+
 const techStacks = {
 	'front-end': [
 		{
 			name: 'Typescript',
-			logo: <SiTypescript size='3.5rem' />,
+			logo: <SiTypescript size="3.5rem" />,
 			link: 'https://www.typescriptlang.org/',
 		},
 		{
 			name: 'React',
-			logo: <SiReact size='3.5rem' />,
+			logo: <SiReact size="3.5rem" />,
 			link: 'https://reactjs.org/',
 		},
 		{
 			name: 'React Native',
-			logo: <SiReact size='3.5rem' />,
+			logo: <SiReact size="3.5rem" />,
 			link: 'https://reactnative.dev/',
 		},
 		{
 			name: 'Next',
-			logo: <SiNextDotJs size='3.5rem' />,
+			logo: <SiNextdotjs size="3.5rem" />,
 			link: 'https://nextjs.org/',
 		},
 		{
 			name: 'Gatsby',
-			logo: <SiGatsby size='3.5rem' />,
+			logo: <SiGatsby size="3.5rem" />,
 			link: 'https://www.gatsbyjs.com/',
 		},
 	],
 	'back-end': [
 		{
 			name: 'Node.js',
-			logo: <SiNodeDotJs size='3.5rem' />,
+			logo: <SiNodedotjs size="3.5rem" />,
 			link: 'https://nodejs.org/en/',
 		},
 		{
 			name: 'Firebase',
-			logo: <SiFirebase size='3.5rem' />,
+			logo: <SiFirebase size="3.5rem" />,
 			link: 'https://firebase.google.com/',
 		},
 		{
+			name: 'Nest',
+			logo: <SiNestjs size="3.5rem" />,
+			link: 'https://nestjs.com/',
+		},
+		{
 			name: 'Prismic',
-			logo: <SiPrismic size='3.5rem' />,
+			logo: <SiPrismic size="3.5rem" />,
 			link: 'https://prismic.io/',
 		},
 		{
 			name: 'Graphql',
-			logo: <SiGraphql size='3.5rem' />,
+			logo: <SiGraphql size="3.5rem" />,
+			link: 'https://graphql.org/',
+		},
+		{
+			name: 'TypeORM',
+			logo: <BsBraces size="3.5rem" />,
 			link: 'https://graphql.org/',
 		},
 	],
