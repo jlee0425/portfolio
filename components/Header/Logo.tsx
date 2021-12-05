@@ -9,10 +9,13 @@ interface LogoProps {
 
 export const Logo = ({ hidden, lg }: LogoProps) => {
 	return (
-		<Container hidden={hidden}>
-			<Link href='/' passHref>
+		<Container
+			hidden={hidden}
+			onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+		>
+			<Link href="/" passHref>
 				<LogoContainer>
-					<LogoImg src='./logo_white.png' lg={lg} />
+					<LogoImg src="./logo_white.png" lg={lg} />
 				</LogoContainer>
 			</Link>
 		</Container>

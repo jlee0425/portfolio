@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image from 'next/image';
 
 interface Props {
 	image: string;
@@ -13,84 +14,119 @@ interface Props {
 export const ProjectCard = ({ image, title, tags, git, demo, to }: Props) => {
 	return (
 		<Container>
-			<Img src={`thumbnails/${image}`} />
-			<TitleContainer>
+			<ImageWrapper>
+				<Image
+					src={`/thumbnails/${image}`}
+					layout="fill"
+					alt=""
+					objectFit="cover"
+				/>
+			</ImageWrapper>
+
+			<Main>
 				<Title>{title}</Title>
 				<Hr />
-			</TitleContainer>
-			<div>
-				<TagList>
-					{tags.map((tag, i) => (
-						<Tag key={i}>{tag}</Tag>
-					))}
-				</TagList>
-			</div>
-			<Links>
-				<Link href={git}>Source</Link>
-				<Link href={demo}>Demo</Link>
-			</Links>
+				<div>
+					<TagList>
+						{tags.map((tag, i) => (
+							<Tag key={i}>{tag}</Tag>
+						))}
+					</TagList>
+				</div>
+				<Links>
+					<Link href={git}>Source</Link>
+					<Link href={demo}>Demo</Link>
+				</Links>
+			</Main>
 		</Container>
 	);
 };
 
 const Container = styled.div`
+	display: flex;
+	flex-direction: column;
 	border-radius: 10px;
 	box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
 	text-align: center;
-	width: 400px;
-	height: 600px;
-	margin-bottom: 2rem;
-	z-index: 1;
+	width: 320px;
+	aspect-ratio: 2/3;
 	@media ${({ theme }) => theme.breakpoints.sm} {
+		flex-direction: row;
 		width: 100%;
+		height: 180px;
 	}
 `;
-const Img = styled.img`
+
+const ImageWrapper = styled.div`
+	position: relative;
 	width: 100%;
 	height: 60%;
-	border-radius: 10px 10px 0 0;
-	object-fit: cover;
-	overflow: hidden;
+	margin-bottom: 1rem;
+	& > span {
+		border-radius: 10px 10px 0 0;
+	}
+	@media ${({ theme }) => theme.breakpoints.sm} {
+		max-width: 40%;
+		height: 100%;
+		margin-right: 2rem;
+
+		& > span {
+			border-radius: 10px 0 0 10px;
+		}
+	}
 `;
-const TitleContainer = styled.div`
-	text-align: center;
-	z-index: 20;
-	width: 100%;
+const Main = styled.div`
+	@media ${({ theme }) => theme.breakpoints.sm} {
+		width: 60%;
+		padding: 1rem;
+	}
 `;
 
 const Title = styled.h3`
 	font-weight: 500;
 	letter-spacing: 2px;
 	color: #9cc9e3;
-	padding: 0.5rem 0;
-	font-size: ${({ title }) => (title ? '3rem' : '2rem')};
+	padding: 1rem 0;
+	font-size: 2rem;
+	@media ${({ theme }) => theme.breakpoints.sm} {
+		font-size: 1.5rem;
+	}
 `;
 
 const Hr = styled.hr`
 	width: 50px;
 	height: 3px;
-	margin: 20px auto;
+	margin: 1.5rem auto;
 	border: 0;
 	background-color: #d0bb57;
+	@media ${({ theme }) => theme.breakpoints.sm} {
+		margin: 1rem auto;
+	}
 `;
 
 const TagList = styled.ul`
 	display: flex;
-	justify-content: space-around;
-	padding: 2rem;
+	justify-content: space-evenly;
+	margin: 2rem 0;
 `;
 
 const Tag = styled.li`
 	color: #d8bfbf;
 	font-size: 1.5rem;
+	@media ${({ theme }) => theme.breakpoints.sm} {
+		font-size: 1.1rem;
+	}
 `;
 
 const Links = styled.ul`
 	list-style-type: none;
 	padding: 0;
 	display: flex;
-	justify-content: space-around;
-	margin: 2.5rem 0;
+	justify-content: space-evenly;
+	margin: 2rem 0;
+	@media ${({ theme }) => theme.breakpoints.sm} {
+		margin-top: 3rem;
+	}
 `;
 
 const Link = styled.a`
@@ -102,5 +138,8 @@ const Link = styled.a`
 	transition: 0.5s;
 	&:hover {
 		background-color: #801414;
+	}
+	@media ${({ theme }) => theme.breakpoints.sm} {
+		font-size: 1.2rem;
 	}
 `;

@@ -4,14 +4,14 @@ import {
 	SectionDivider,
 	SectionText,
 	SectionTitle,
-} from '@styles/styledComponents';
+} from '@components/styledComponents';
 import styled from 'styled-components';
 import { ProjectCard } from './ProjectCard';
 import projects from '@lib/projects.json';
 
 const index = () => {
 	return (
-		<Section id='projects'>
+		<Section id="projects">
 			<SectionDivider divider />
 			<SectionTitle>Projects</SectionTitle>
 			<SectionText>
@@ -40,16 +40,16 @@ export default index;
 
 const GridContainer = styled.section`
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-	padding: 3rem;
+	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+	margin: 3rem 0;
 	place-items: center;
 	column-gap: 2rem;
 	row-gap: 3rem;
 
-	@media ${({ theme }) => theme.breakpoints.sm} {
+	/* @media ${({ theme }) => theme.breakpoints.sm} {
 		display: flex;
 		flex-direction: column;
 		padding: 2rem;
 		padding-bottom: 0;
-	}
+	} */
 `;

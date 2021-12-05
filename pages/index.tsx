@@ -1,7 +1,7 @@
 import Hero from '@components/Hero';
 import Projects from '@components/Projects';
 import TechStacks from '@components/TechStacks';
-import { Section } from '@styles/styledComponents';
+import { Section } from '@components/styledComponents';
 import React from 'react';
 
 export default function Home() {

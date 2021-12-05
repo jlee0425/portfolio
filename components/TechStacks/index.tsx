@@ -3,14 +3,14 @@ import {
 	SectionDivider,
 	SectionText,
 	SectionTitle,
-} from '@styles/styledComponents';
+} from '@components/styledComponents';
 import React from 'react';
 import { TechList } from './TechList';
 
 // TODO media small
 const index = () => {
 	return (
-		<Section id='tech'>
+		<Section id="tech">
 			<SectionDivider divider />
 			<SectionTitle>Tech Stacks</SectionTitle>
 			<SectionText>
