@@ -1,5 +1,13 @@
 [
 	{
+		"title": "Web Spotify",
+		"thumbnail": "spotify.png",
+		"tags": ["Nextjs", "Typescript", "Recoil", "Next-Auth"],
+		"to": "/portfolio/spotify",
+		"url": "https://spotify-five-amber.vercel.app/",
+		"git": "https://github.com/jlee0425/spotify"
+	},
+	{
 		"title": "jlee0425.github.io",
 		"thumbnail": "portfolio.png",
 		"tags": ["React", "Gatsby.js", "Prismic", "GraphQL"],
@@ -26,7 +34,7 @@
 	{
 		"title": "Movie Browser",
 		"thumbnail": "movie-browser.png",
-		"tags": ["React Native", "Expo", "Redux"],
+		"tags": ["React-Native", "Expo", "Redux"],
 		"to": "/portfolio/movie-browser",
 		"url": "https://youtu.be/wGMgR8q_aRs",
 		"git": "https://github.com/jlee0425/Movie_Browser"
