@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Section, SectionText, SectionTitle } from '@styles/styledComponents';
+import {
+	Section,
+	SectionText,
+	SectionTitle,
+} from '@components/styledComponents';
 
 const index = () => {
 	return (
