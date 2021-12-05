@@ -12,7 +12,14 @@ const index = ({ children }: Props) => {
 	return (
 		<>
 			<Head>
-				{/* <link rel="icon" href="./logo.png" /> */}
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="description" content="Jeongkyu's homepage" />
+				<meta name="author" content="Jeongkyu Lee" />
+				<meta name="author" content="JL" />
+				<meta property="og:site_name" content="Jeongkyu Lee's Homepage" />
+				<meta property="og:type" content="website" />
+				<meta property="og:image" content="/thumbnails/portfolio.png" />
+				<link rel="icon" href="./logo.png" />
 				<title>JLEE</title>
 			</Head>
 			<Container>
@@ -30,4 +37,5 @@ const Container = styled.div`
 	max-width: 1280px;
 	width: 100%;
 	margin: auto;
+	overflow: hidden;
 `;
