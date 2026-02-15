@@ -1,0 +1,33 @@
+{
+	"version": 1.1,
+	"atDirectives": [
+		{
+			"name": "@source",
+			"description": "Tailwind CSS v4 - Define content sources for utility detection"
+		},
+		{
+			"name": "@theme",
+			"description": "Tailwind CSS v4 - Define design tokens"
+		},
+		{
+			"name": "@plugin",
+			"description": "Tailwind CSS v4 - Register plugins"
+		},
+		{
+			"name": "@variant",
+			"description": "Tailwind CSS v4 - Define custom variants"
+		},
+		{
+			"name": "@utility",
+			"description": "Tailwind CSS v4 - Define custom utilities"
+		},
+		{
+			"name": "@custom-variant",
+			"description": "Tailwind CSS v4 - Define custom variants"
+		},
+		{
+			"name": "@reference",
+			"description": "Tailwind CSS v4 - Reference external styles"
+		}
+	]
+}
