@@ -1,0 +1,20 @@
+import type { Metadata } from 'next';
+
+import '@/styles/index.css';
+
+export const metadata: Metadata = {
+	title: 'J LEE',
+	description: 'Portfolio of Jeongkyu Lee (Jake)',
+};
+
+export default function RootLayout({
+	children,
+}: Readonly<{
+	children: React.ReactNode;
+}>) {
+	return (
+		<html lang="en">
+			<body className="antialiased">{children}</body>
+		</html>
+	);
+}
