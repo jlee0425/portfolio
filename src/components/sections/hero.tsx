@@ -83,23 +83,16 @@ export const HeroSection = () => {
 							</a>
 							<div className="flex items-center gap-2">
 								{[
-									{
-										icon: LuGithub,
-										href: LINKS[0].href,
-										label: LINKS[0].label,
-									},
-									{
-										icon: LuLinkedin,
-										href: LINKS[1].href,
-										label: LINKS[1].label,
-									},
+									{ icon: LuGithub, href: 'https://github.com/jlee0425', label: 'GitHub' },
+									{ icon: LuLinkedin, href: 'https://www.linkedin.com/in/jlee0425/', label: 'LinkedIn' },
 								].map(({ icon: Icon, href, label }) => (
 									<a
 										key={label}
 										href={href}
-										className="p-3 rounded-full border border-white/10 text-white/40 hover:text-[#00d4ff] hover:border-[#00d4ff]/30 hover:bg-[#00d4ff]/5 transition-all"
+										className="p-3 rounded-full border border-white/10 text-white/40 hover:text-[`#00d4ff`] hover:border-[`#00d4ff`]/30 hover:bg-[`#00d4ff`]/5 transition-all"
 										aria-label={label}
-										target={label}
+										target="_blank"
+										rel="noopener noreferrer"
 									>
 										<Icon size={16} />
 									</a>
