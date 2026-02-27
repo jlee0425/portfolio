@@ -131,7 +131,7 @@
 	html {
 		font-size: var(--font-size);
 		font-family:
-			Space Grotesk,
+			'Space Grotesk',
 			sans-serif;
 		scroll-behavior: smooth;
 	}
